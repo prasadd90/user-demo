@@ -15,7 +15,11 @@ function AddUser() {
   });
 
   // Load user data if editing an existing user
-  const loadUser = async () => {
+  
+ // ✅ Load user only once when editing when component mounts or id changes or renders with new id (if user clicks edit different user without going back to list)
+  useEffect(() => {
+    if (id) {
+     const loadUser = async () => {
     const users = await getUsersById(id);   // you can create getUserById API instead
     const selectedUser =users;// users.find((u) => u._id === id);
 
@@ -24,12 +28,8 @@ function AddUser() {
       
     }
   };
- // ✅ Load user only once when editing when component mounts or id changes or renders with new id (if user clicks edit different user without going back to list)
-  useEffect(() => {
-    if (id) {
-      loadUser();
     }
-  }, [id]);
+  }, []);
   const handleChange = (e) => {
     const { name, value } = e.target;
 
