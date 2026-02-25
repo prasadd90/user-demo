@@ -4,12 +4,11 @@ const API_URL = "/api/users/";
  const addApiUrl = "https://vsnod.onrender.com/api/users/"; 
 export const getUsers = async () => {
   try {
-    const response = await fetch(API_URL);
-    console.log("API Response:", response);
+    const response = await fetch(addApiUrl);
     if (!response.ok) {
       throw new Error("Failed to fetch users");
     }
-    return   response.json();
+    return await response.json();
   } catch (error) {
     console.error("API Error:", error);
     return [];
