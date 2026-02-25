@@ -16,6 +16,18 @@ export const getUsers = async () => {
 };
  
 
+// export const getUsersById = async (id) => {
+//   try {
+//     const response = await fetch(`${addApiUrl}${id}`);  
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch users");
+//     }
+//     return await response.json();
+//   } catch (error) {
+//     console.error("API Error:", error);
+//     return [];
+//   }
+// };
 export const getUsersById = async (id) => {
   try {
     const response = await fetch(`${addApiUrl}${id}`);  
