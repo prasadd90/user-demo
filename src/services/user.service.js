@@ -1,6 +1,6 @@
 // Use a relative path so the CRA dev server can proxy requests to the API
 
-const API_URL = "/api/users/";
+ 
  const addApiUrl = "https://vsnod.onrender.com/api/users/"; 
 export const getUsers = async () => {
   try {
