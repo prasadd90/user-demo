@@ -18,7 +18,7 @@ export const getUsers = async () => {
 
 export const getUsersById = async (id) => {
   try {
-    const response = await fetch(`${addApiUrl}${id}`);
+    const response = await fetch(`${addApiUrl}${id}`);  
     if (!response.ok) {
       throw new Error("Failed to fetch users");
     }
