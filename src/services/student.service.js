@@ -56,7 +56,7 @@ debugger;
 
 export const updateStudent = async (id, StudentData) => {
   
-  alert('Update'+`${addApiUrl}${id}`)
+   
   const response = await fetch(`${addApiUrl}${id}`, {
     method: "PUT",
     headers: {
