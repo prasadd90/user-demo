@@ -8,7 +8,7 @@ import AddUser from "./Component/AddUser";
 import "./App.css";
 import './App.css';
 import Login from "./Component/login";
-import AddStudent from "../src/Component/AddStudent"
+import AddStudent from "../src/Component/AddStudent";
 import StudentList from "../src/Component/StudentList"
 import Students from "./pages/Students";
 // Import CSS for styling

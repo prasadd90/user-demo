@@ -52,19 +52,16 @@ function AddStudents() {
       
         
        console.log("Form Data on Submit:", id); // Debug log to verify form data
-      if(!id) {alert('id is not null'+id);}
-      if (id==':id') {
+      
+      if (id ===':id') {
             await createStudent(formData);
        alert("Student Created Successfully");
        
       } else {
           console.log("Insert : " + formData);
-await updateStudent(id, formData);
+     await updateStudent(id, formData);
       
- alert("Student Updated Successfully");
-       
-         
-        
+     alert("Student Updated Successfully");      
       }
 
       navigate("/StudentList");
