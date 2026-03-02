@@ -75,7 +75,7 @@ export const updateStudent = async (id, StudentData) => {
   export const deleteStudentById = async (id) => {
   try {
     alert(`${addApiUrl}/student/delete/${id}`);
-    const response = await fetch(`${addApiUrl}/student/delete/${id}`, {
+    const response = await fetch(`${addApiUrl}student/delete/${id}`, {
       method: "DELETE"
     });
     if (!response.ok) {
