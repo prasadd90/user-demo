@@ -3,13 +3,14 @@ import { getUsers } from "../services/user.service";
 import UserTable from "../Component/UserTable";
 
 function Users() {
-  const [users, setUsers] = useState([]);
+  const [myusers, setUsers] = useState([]);
 
   useEffect(() => {
     loadUsers();
   }, []);
 
   const loadUsers = async () => {
+    debugger;
     const data = await getUsers();
     setUsers(data);
   };
@@ -18,7 +19,7 @@ function Users() {
     <div>
       
       {/* Session global variable for the User table */}
-      <UserTable users={users} /> 
+      <UserTable users={myusers} /> 
     </div>
   );
 }

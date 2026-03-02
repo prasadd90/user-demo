@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [openUserMenu, setOpenUserMenu] = useState(false);
+  const [openStudMenu, setOpenStudMenu] = useState(false);
 
   return (
     <div className="sidebar">
@@ -23,8 +24,20 @@ function Sidebar() {
     <li><Link to="/add" className="menu-link">Add User</Link></li>
   </ul>
 )}
+ <li onClick={() => setOpenStudMenu(!openStudMenu)}>
+          Student ▾
+        </li>
 
-
+        {openStudMenu && (
+  <ul className="submenu">
+     <li>
+      <Link to="/studentlist" className="menu-link">Student List</Link>
+    </li>
+    <li>
+      <Link to="/addstudent/:id" className="menu-link">Add Student</Link>
+    </li>
+  </ul>
+)}
         <li>Settings</li>
         <li>Reports</li>
       </ul>
