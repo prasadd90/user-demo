@@ -101,7 +101,7 @@ function StudentList({ students }) {
           </div>
     
           {/* Table */}
-          <table className="admin-table">
+          <table className="admin-table" style={{width:"100%",overflowX:"auto"}}>
             <thead>
               <tr>
                 <th>Student Name</th>
