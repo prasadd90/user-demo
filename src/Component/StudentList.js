@@ -108,7 +108,7 @@ function StudentList({ students }) {
                 <th>Mobile</th>
                 <th>Email</th>
                 <th>City</th>
-                <th>Status</th>
+               
                 <th>Created</th>
                 <th>Edit</th>
                 <th>Delete</th>
