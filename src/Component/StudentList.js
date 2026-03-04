@@ -60,7 +60,7 @@ function StudentList({ students }) {
   const totalPages = Math.ceil(filteredStudents.length / recordsPerPage);
 
   return (
-    <div className="table-container">
+    <div className="table-container" style={{width:"100%",overflowX:"auto",borderCollapse:"collapse"}} >
           <h2 className="table-title">Student List</h2>
     
           {/* Search + Page Size */}
@@ -101,7 +101,7 @@ function StudentList({ students }) {
           </div>
     
           {/* Table */}
-          <table className="admin-table" style={{width:"100%",overflowX:"auto"}}>
+          <table className="admin-table" >
             <thead>
               <tr>
                 <th>Student Name</th>
